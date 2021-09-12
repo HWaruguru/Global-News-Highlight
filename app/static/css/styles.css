@@ -1,3 +1,19 @@
 .source_description {
     font-size: 0.8rem;
 }
+.articles {
+    display: flex ;
+    justify-content: space-around ;
+    flex-wrap: wrap ;
+
+}
+
+.article_link  {
+    text-decoration: none !important;
+}
+
+.card {
+    width: 24rem;
+    margin-bottom: 8px;
+    color: black;
+}
