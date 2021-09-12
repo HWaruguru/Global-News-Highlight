@@ -33,3 +33,16 @@ def get_articles():
     res = requests.get(articles_url)
     articles_data = res.json().get('articles')
     return articles_data
+
+
+def get_articles_from_source(source_id):
+    '''
+    Function that gets the json response to our url request
+    '''
+    articles_url = f'{base_url}everything?sources={source_id}&pageSize=100&apiKey={api_key}'
+
+    res = requests.get(articles_url)
+    articles_data = res.json().get('articles')
+    return articles_data
+
+
