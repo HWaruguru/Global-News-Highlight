@@ -11,6 +11,7 @@
       integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
   </head>
   <body>
     <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
@@ -52,7 +53,7 @@
                 <h5 class="mb-1">{{ source.name }}</h5>
                 <small>{{ source.category }}</small>
               </div>
-              <p class="mb-1">{{ source.description }}</p>
+              <p class="mb-1 source_description">{{ source.description }}</p>
               <small> Language: {{ source.language }}</small>
             </a>
             {% endfor %}
