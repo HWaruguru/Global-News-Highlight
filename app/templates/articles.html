@@ -1,0 +1,44 @@
+{% extends "base.html" %} {% block body %}
+<div class="row">
+  <div class="col-md-4">
+    <div class="list-group">
+      {% for source in sources %}
+      <a href="/articles/{{source.id}}" class="list-group-item list-group-item-action">
+        <div class="d-flex w-100 justify-content-between">
+          <h5 class="mb-1">{{ source.name }}</h5>
+          <small>{{ source.category }}</small>
+        </div>
+        <p class="mb-1 source_description">{{ source.description }}</p>
+        <small> Language: {{ source.language }}</small>
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+  <div class="col-md-8">
+    <div class="articles">
+      {% for article in articles %}
+      <a href="{{article.url}}" class="article_link">
+        <div class="card">
+          <img
+            src="{{article.urlToImage}}"
+            class="card-img-top img-fluid"
+            alt="..."
+          />
+          <div class="card-body">
+            <h5 class="card-title">{{ article.title }}</h5>
+            <p class="card-text">{{ article.description }}</p>
+          </div>
+          <div class="card-footer">
+            <small class="text-muted"
+              >Published on: {{ article.publishedAt }}</small
+            >
+          </div>
+        </div>
+      </a>
+
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+{% endblock %}
