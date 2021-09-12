@@ -1,3 +1,4 @@
+
 .source_description {
     font-size: 0.8rem;
 }
@@ -16,4 +17,9 @@
     width: 24rem;
     margin-bottom: 8px;
     color: black;
+}
+
+.list-group-item:hover {
+    background-color: #C5CBE3 !important;
+    
 }
